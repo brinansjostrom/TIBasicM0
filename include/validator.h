@@ -12,6 +12,8 @@
 struct basic_code{
     char** line_code;
     size_t num_lines;
+    size_t *len_lines;
+    size_t *file_pos;
 };
 
 // Parses file, producing a list ptr to strings.
