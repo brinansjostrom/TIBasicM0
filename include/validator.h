@@ -10,7 +10,7 @@
 
 // Create structure to store lines of code and how many lines of code there are.
 struct basic_code{
-    char** line_code;
+    char** lines_of_code;
     size_t num_lines;
     size_t *len_lines;
     size_t *file_pos;
