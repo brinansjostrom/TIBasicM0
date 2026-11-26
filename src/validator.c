@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "validator.h"
 
-struct basic_code build_parse(char *file_name){
+void build_parse(char *file_name, struct basic_code *current_code_ptr){
 
     // Initialize the structure that holds the code that we will be compiling
     struct basic_code current_code; // Holds the code from the file
@@ -88,5 +88,20 @@ struct basic_code build_parse(char *file_name){
     // Close file ptr
     fclose(bf_ptr);
 
-return current_code;
+    *current_code_ptr = current_code;
+    return;
+}
+
+
+void free_basic_code(struct basic_code *code_to_free){
+
+    // later for the char** lines_of_code variable :)
+    size_t num_lines = code_to_free->num_lines;
+    for(int i = 0; i < num_lines;i++){
+        // Nothing to see here
+    }
+
+    free(code_to_free->len_lines);
+    free(code_to_free->file_pos);
+    return;
 }

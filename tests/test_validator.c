@@ -23,7 +23,9 @@ int main(){
         expected_basic_code.file_pos[1] = 16;
 
     // Produce actual output
-    struct basic_code actual_basic_code = build_parse(test_file);
+
+    struct basic_code actual_basic_code;
+    build_parse(test_file, &actual_basic_code);
 
     // Test Case: Check if the code is counting correct lines of code
     assert(actual_basic_code.num_lines == expected_basic_code.num_lines);
@@ -50,6 +52,8 @@ int main(){
         assert(expected_basic_code.file_pos[i] == actual_basic_code.file_pos[i]);
     }
 
-
+    // free the code
+    free_basic_code(&actual_basic_code);
+    free_basic_code(&expected_basic_code);
     return 0;
 }

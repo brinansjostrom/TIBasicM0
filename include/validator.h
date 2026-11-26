@@ -17,8 +17,9 @@ struct basic_code{
 };
 
 // Parses file, producing a list ptr to strings.
-struct basic_code build_parse(char*);
+void build_parse(char*, struct basic_code*);
+
 // Frees the basic code
-void free_basic_code(struct basic_code);
+void free_basic_code(struct basic_code*);
 
 #endif
