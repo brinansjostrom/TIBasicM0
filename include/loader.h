@@ -1,6 +1,6 @@
-// include/validator.h
-#ifndef _VALIDATOR_H_
-#define _VALIDATOR_H_
+// include/loader.h
+#ifndef _LOADER_H_
+#define _LOADER_H_
 
 #include <stddef.h>
 #include <stdio.h>
@@ -16,10 +16,11 @@ struct basic_code{
     size_t* pos;
 };
 
-// Parses file, producing a list ptr to strings.
-void build_parse(char*, struct basic_code*);
+// loads file into the second argument, the first argument is the file name
+// The goal of this function is to load the file into memory
+void load_file(char*, struct basic_code*);
 
-// Frees the basic code
+// Frees the basic_code struct
 void free_basic_code(struct basic_code*);
 
 #endif

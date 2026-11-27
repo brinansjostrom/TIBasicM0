@@ -1,8 +1,8 @@
-OBJECTS = main.o parser.o
+OBJECTS = main.o loader.o
 CFLAGS = -Wall -g -c -Iinclude
 CC = gcc
 EXE = build/TIBasicM0
-TEST_BUILDS = tests/test_validator.out
+TEST_BUILDS = tests/test_loader.out
 
 #Compile all
 default: all
@@ -13,19 +13,19 @@ main.o: src/main.c
 	$(CC) $(CFLAGS) -o main.o src/main.c
 
 
-parser.o: src/parser.c
-	$(CC) $(CFLAGS) -o parser.o src/parser.c
+loader.o: src/loader.c
+	$(CC) $(CFLAGS) -o loader.o src/loader.c
 
 clean:
 	rm *.o $(OBJECTS) $(EXE) $(TEST_BUILDS)
 
 # test cases
 # Test Parser src
-test_parser: parser.o test_parser.o
-	$(CC) parser.o test_parser.o -o tests/test_parser.out
+test_loader: loader.o test_loader.o
+	$(CC) loader.o test_loader.o -o tests/test_loader.out
 
-parser.o: src/parser.c
-	$(CC) $(CFLAGS) -o parser.o src/parser.c
+loader.o: src/loader.c
+	$(CC) $(CFLAGS) -o loader.o src/loader.c
 
-test_parser.o: tests/test_parser.c
-	$(CC) $(CFLAGS) -o test_parser.o tests/test_parser.c
+test_loader.o: tests/test_loader.c
+	$(CC) $(CFLAGS) -o test_loader.o tests/test_loader.c
