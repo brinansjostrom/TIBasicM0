@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "loader.h"
 
-void build_parse(char *file_name, struct basic_code *current_code_ptr){
+void load_file(char *file_name, struct basic_code *current_code_ptr){
 
     // Initialize the structure that holds the code that we will be compiling
     struct basic_code current_code; // Holds the code from the file
