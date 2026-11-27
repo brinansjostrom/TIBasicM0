@@ -1,6 +1,6 @@
-// include/validator.h
-#ifndef _VALIDATOR_H_
-#define _VALIDATOR_H_
+// include/loader.h
+#ifndef _LOADER_H_
+#define _LOADER_H_
 
 #include <stddef.h>
 #include <stdio.h>

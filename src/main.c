@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "parser.h"
+#include "loader.h"
 
 #define TRUE 1
 #define FALSE 0

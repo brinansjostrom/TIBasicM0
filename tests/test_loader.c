@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "validator.h"
+#include "loader.h"
 
 int main(){
 
