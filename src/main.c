@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "validator.h"
+#include "parser.h"
 
 #define TRUE 1
 #define FALSE 0
