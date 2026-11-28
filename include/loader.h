@@ -7,6 +7,8 @@
 
 #define TRUE 1
 #define FALSE 0
+#define BUFFER_SIZE 256
+
 
 // Create structure to store lines of code and how many lines of code there are.
 struct basic_code{

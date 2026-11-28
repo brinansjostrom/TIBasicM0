@@ -1,4 +1,5 @@
-LET count = 4
+5->A
+10->B
 
 
-LET test = 5
+A+B->C
